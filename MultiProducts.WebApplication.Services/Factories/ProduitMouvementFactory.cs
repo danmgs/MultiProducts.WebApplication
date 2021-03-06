@@ -9,7 +9,7 @@ namespace MultiProducts.WebApplication.Services.Factories
     {
         public ICommunProduitMouvementService BuildService(string productCode)
         {
-            ICommunProduitMouvementService communService = new CommunProduitMouvementService();
+            ICommunProduitMouvementService communService = null;
 
             if (productCode.Equals(EnumProduct.Auto.ToString(), StringComparison.OrdinalIgnoreCase))
             {
@@ -22,6 +22,10 @@ namespace MultiProducts.WebApplication.Services.Factories
             else if (productCode.Equals(EnumProduct.MRH.ToString(), StringComparison.OrdinalIgnoreCase))
             {
                 communService = new MRHProduitMouvementService();
+            }
+            else
+            {
+                throw new NotSupportedException($"Not supported for product code : {productCode}");
             }
 
             return communService;

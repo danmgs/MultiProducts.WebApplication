@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace MultiProducts.WebApplication.Services
 {
-    public class CommunProduitMouvementService : AbstractProduitMouvementService, ICommunProduitMouvementService
+    public abstract class CommunProduitMouvementService : ICommunProduitMouvementService
     {
         public virtual string Move1()
         {
