@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MultiProducts.WebApplication.Model\MultiProducts.WebApplication.Model.csproj" />
+    <ProjectReference Include="..\MultiProducts.WebApplication.Services\MultiProducts.WebApplication.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>
